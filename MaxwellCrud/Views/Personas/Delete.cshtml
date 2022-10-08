@@ -1,0 +1,30 @@
+﻿@model MaxwellCrud.Models.Persona
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>¡Está borrando permanentemente este archivo!, ¿seguro que desea continuar?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PersonaNombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PersonaNombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PersonaDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PersonaDate)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="PersonaId" />
+        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-info">Cancelar acción</a>
+    </form>
+</div>
